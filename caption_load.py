@@ -2,7 +2,7 @@
 ĐÂY LÀ FOLDER XỬ LÝ TEXT, ĐÃ TÁCH RA KHÔNG CẦN PHẢI NHÚNG BÊN HÌNH ẢNH VÀO
 """
 
-caption_path = r'data\token.txt'
+caption_path = r'C:\Users\Pham Thien An\PycharmProjects\data\token.txt'
 
 
 # Hàm dùng để lấy caption

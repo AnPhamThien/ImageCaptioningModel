@@ -4,7 +4,7 @@ from caption_split import training_image_names
 from tqdm import tqdm
 from tensorflow.keras.applications import inception_v3
 
-img_path = "data/Images/"
+img_path = "C:/Users/Pham Thien An/PycharmProjects/data/Images/"
 
 
 # load ảnh và preprocess ảnh
@@ -37,12 +37,12 @@ image_dataset = image_dataset.map(
     load_image, num_parallel_calls=tf.data.experimental.AUTOTUNE).batch(
     30)  # tuning dataset, 1 batch = 30 ảnh, xử lí song song tùy theo độ khỏe của CPU
 
-# lấy feature của từng ảnh
-for img, path in tqdm(image_dataset):  # thanh progressbar
-    batch_features = image_features_extract_model(img)  # móc feature ra
-    batch_features = tf.reshape(batch_features,
-                                (batch_features.shape[0], -1, batch_features.shape[3]))  # reshape
-
-    for bf, p in zip(batch_features, path):
-        path_of_feature = p.numpy().decode("utf-8")
-        np.save(path_of_feature, bf.numpy())  # lưu fetures vào file ảnh
+# # lấy feature của từng ảnh
+# for img, path in tqdm(image_dataset):  # thanh progressbar
+#     batch_features = image_features_extract_model(img)  # móc feature ra
+#     batch_features = tf.reshape(batch_features,
+#                                 (batch_features.shape[0], -1, batch_features.shape[3]))  # reshape
+#
+#     for bf, p in zip(batch_features, path):
+#         path_of_feature = p.numpy().decode("utf-8")
+#         np.save(path_of_feature, bf.numpy())  # lưu fetures vào file ảnh

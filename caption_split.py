@@ -2,7 +2,7 @@
 Chia ra để dùng cho train, validate và test
 """
 
-training_image_name_file = r"data/trainImages.txt"
+training_image_name_file = r"C:\Users\Pham Thien An\PycharmProjects\data\trainImages.txt"
 
 
 # ném file vào lấy tên ảnh ra
